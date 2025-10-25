@@ -31,7 +31,17 @@
       "bundler": "metro"
     },
     "plugins": [
-      "expo-router"
+      "expo-router",
+      [
+        "react-native-edge-to-edge",
+        {
+          "android": {
+            "parentTheme": "Theme.MaterialComponents.DayNight.DarkActionBar",
+            "enforceFullScreen": true
+          }
+        }
+      ],
+      "expo-font"
     ]
   }
 }

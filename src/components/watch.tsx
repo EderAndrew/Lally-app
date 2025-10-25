@@ -31,7 +31,7 @@ export default function Watch() {
     Animated.loop(
       Animated.timing(hourAnim, {
         toValue: startHourAngle + 360,
-        duration: 60 * 60 * 1000, // 1 hora
+        duration: 12 * 60 * 60 * 1000, // 12 horas
         easing: Easing.linear,
         useNativeDriver: true,
       })
@@ -85,9 +85,9 @@ export default function Watch() {
   });
 
   // Tamanhos dos ponteiros
-  const HOUR_HEIGHT = 60;
-  const MINUTE_HEIGHT = 90;
-  const SECOND_HEIGHT = 100;
+  const HOUR_HEIGHT = 50;
+  const MINUTE_HEIGHT = 75;
+  const SECOND_HEIGHT = 85;
 
   // A transformação faz o ponteiro girar com a **base presa no centro**
   // TranslateY antes e depois da rotação muda o pivô de rotação
@@ -146,22 +146,22 @@ export default function Watch() {
 
 const styles = StyleSheet.create({
   watchContainer: {
-    width: 280,
-    height: 280,
+    width: 200,
+    height: 200,
     justifyContent: "center",
     alignItems: "center",
     backgroundColor: "#000000",
-    borderRadius: 140,
+    borderRadius: 100,
     borderWidth: 1,
     borderColor: "#333333",
     shadowColor: "#000",
     shadowOffset: {
       width: 0,
-      height: 8,
+      height: 4,
     },
     shadowOpacity: 0.3,
-    shadowRadius: 16,
-    elevation: 8,
+    shadowRadius: 8,
+    elevation: 4,
   },
   pointer: {
     position: "absolute",
@@ -169,7 +169,7 @@ const styles = StyleSheet.create({
     borderRadius: 2,
   },
   hourPointer: {
-    width: 4,
+    width: 3,
     backgroundColor: "#ffffff",
     shadowColor: "#000",
     shadowOffset: {
@@ -181,7 +181,7 @@ const styles = StyleSheet.create({
     elevation: 2,
   },
   minutePointer: {
-    width: 2,
+    width: 1.5,
     backgroundColor: "#ffffff",
     shadowColor: "#000",
     shadowOffset: {
@@ -193,7 +193,7 @@ const styles = StyleSheet.create({
     elevation: 2,
   },
   secondPointer: {
-    width: 1,
+    width: 0.8,
     backgroundColor: "#ff4444",
     shadowColor: "#ff4444",
     shadowOffset: {
@@ -201,8 +201,8 @@ const styles = StyleSheet.create({
       height: 0,
     },
     shadowOpacity: 0.8,
-    shadowRadius: 4,
-    elevation: 4,
+    shadowRadius: 3,
+    elevation: 3,
   },
   centerDot: {
     width: 8,
