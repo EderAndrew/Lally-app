@@ -41,7 +41,30 @@
           }
         }
       ],
-      "expo-font"
+      [
+        "expo-font",
+        {
+          "fonts": [
+            "./assets/fonts/BagelFatOne-Regular.ttf"
+          ],
+          "android": {
+            "fonts": [
+              {
+                "fontFamily": "BagelFatOne",
+                "fontDefinitions": [
+                  {
+                    "path": "./assets/fonts/BagelFatOne-Regular.ttf"
+                  }
+                ]
+              }
+            ]
+          },
+          "ios":{
+            "fonts": ["./assets/fonts/BagelFatOne-Regular.ttf", ]
+          }
+        }
+      ]
+      
     ]
   }
 }
